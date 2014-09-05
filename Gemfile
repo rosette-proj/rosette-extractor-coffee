@@ -9,6 +9,7 @@ gem 'rosette-core', path: '~/workspace/rosette-core'
 gem 'commonjs-rhino', path: '~/workspace/commonjs-rhino'
 
 group :development, :test do
+  gem 'jbundler'
   gem 'pry-nav'
   gem 'rake'
 end

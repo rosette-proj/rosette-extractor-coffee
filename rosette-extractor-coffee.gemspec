@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
 
   s.add_dependency 'json_pure', '~> 1.8.0'
-  s.requirements << "jar 'org.mozilla:rhino', '1.7R4'"
+  s.add_dependency 'commonjs-rhino', '~> 1.0.0'
 
   s.require_path = 'lib'
   s.files = Dir["{lib,spec}/**/*", "Gemfile", "History.txt", "README.md", "Rakefile", "rosette-extractor-coffee.gemspec"]

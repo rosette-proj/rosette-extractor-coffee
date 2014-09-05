@@ -12,20 +12,24 @@ module Rosette
     class CoffeescriptExtractor < Rosette::Core::Extractor
       protected
 
-      IMPORTANT_KEYS = [
-        'expressions', 'properties', 'objects', 'params',
-        'boundFuncs', 'value', 'base', 'body'
-      ]
-
       DEFAULT_HASH = {}.freeze
 
+      # For some reason, when iterating over a coffeescript AST, nodes with the
+      # same object_id are included multiple times. The seen_objects hash in this
+      # function is meant to de-duplicate them so identical phrases aren't returned.
       def each_function_call(coffeescript_code)
+        seen_objects = {}
+
         if block_given?
           root = parse(coffeescript_code)
           walk(root) do |node|
-            if node.include?('args')
-              yield node
+            unless seen_objects[node.object_id]
+              if node.include?('args')
+                yield node
+              end
             end
+
+            seen_objects[node.object_id] = true
           end
         else
           to_enum(__method__, coffeescript_code)
@@ -58,8 +62,8 @@ module Rosette
               end
             when Java::OrgMozillaJavascript::NativeObject
               yield root
-              IMPORTANT_KEYS.each do |key|
-                walk(root[key]) { |child| yield child }
+              root.each_pair do |key, val|
+                walk(val) { |child| yield child }
               end
           end
         else
@@ -71,6 +75,8 @@ module Rosette
         parser_context.eval(
           "coffee.nodes('#{JavaScriptHelpers.escape_javascript(coffeescript_code)}');"
         )
+      rescue Java::OrgMozillaJavascript::JavaScriptException => e
+        raise Rosette::Core::SyntaxError.new('syntax error', e, :coffeescript)
       end
 
       def parser_context
