@@ -1,41 +1,78 @@
 :underscore:
   index.coffee:
-    - At a Glance
+    - key: At a Glance
+      line_number: 25
   checkout.coffee:
-    - "A %{tip_amount} tip of $%{tip_calc} will be added to your order of $%{total} for a total of $%{grand_total}."
-    - "A tip of $%{tip_calc} will be added to your order of $%{total} for a total of $%{grand_total}."
+    - key: "A %{tip_amount} tip of $%{tip_calc} will be added to your order of $%{total} for a total of $%{grand_total}."
+      line_number: 22
+    - key: "A tip of $%{tip_calc} will be added to your order of $%{total} for a total of $%{grand_total}."
+      line_number: 26
   fulfillment_sentence.coffee:
-    - "You don't offer delivery."
-    - "You deliver between %{start_time} and %{end_time} every day."
-    - "You deliver between %{start_time} and %{end_time} on %{day1}."
-    - "You deliver between %{start_time} and %{end_time} on %{day1} and %{day2}."
-    - "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, and %{day3}."
-    - "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, and %{day4}."
-    - "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
-    - "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
-    - "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
-    - "You deliver all day every day."
-    - "You deliver all day on %{day1}."
-    - "You deliver all day on %{day1} and %{day2}."
-    - "You deliver all day on %{day1}, %{day2}, and %{day3}."
-    - "You deliver all day on %{day1}, %{day2}, %{day3}, and %{day4}."
-    - "You deliver all day on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
-    - "You deliver all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
-    - "You deliver all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
-    - "You don't offer pickup."
-    - "You offer pickup between %{start_time} and %{end_time} every day."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1}."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1} and %{day2}."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, and %{day3}."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, and %{day4}."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
-    - "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
-    - "You offer pickup all day every day."
-    - "You offer pickup all day on %{day1}."
-    - "You offer pickup all day on %{day1} and %{day2}."
-    - "You offer pickup all day on %{day1}, %{day2}, and %{day3}."
-    - "You offer pickup all day on %{day1}, %{day2}, %{day3}, and %{day4}."
-    - "You offer pickup all day on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
-    - "You offer pickup all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
-    - "You offer pickup all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
+    - key: "You don't offer delivery."
+      line_number: 8
+    - key: "You deliver between %{start_time} and %{end_time} every day."
+      line_number: 10
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1}."
+      line_number: 11
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1} and %{day2}."
+      line_number: 12
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, and %{day3}."
+      line_number: 13
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, and %{day4}."
+      line_number: 14
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
+      line_number: 15
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
+      line_number: 16
+    - key: "You deliver between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
+      line_number: 17
+    - key: "You deliver all day every day."
+      line_number: 20
+    - key: "You deliver all day on %{day1}."
+      line_number: 21
+    - key: "You deliver all day on %{day1} and %{day2}."
+      line_number: 22
+    - key: "You deliver all day on %{day1}, %{day2}, and %{day3}."
+      line_number: 23
+    - key: "You deliver all day on %{day1}, %{day2}, %{day3}, and %{day4}."
+      line_number: 24
+    - key: "You deliver all day on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
+      line_number: 25
+    - key: "You deliver all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
+      line_number: 26
+    - key: "You deliver all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
+      line_number: 27
+    - key: "You don't offer pickup."
+      line_number: 31
+    - key: "You offer pickup between %{start_time} and %{end_time} every day."
+      line_number: 33
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1}."
+      line_number: 34
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1} and %{day2}."
+      line_number: 35
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, and %{day3}."
+      line_number: 36
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, and %{day4}."
+      line_number: 37
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
+      line_number: 38
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
+      line_number: 39
+    - key: "You offer pickup between %{start_time} and %{end_time} on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
+      line_number: 40
+    - key: "You offer pickup all day every day."
+      line_number: 43
+    - key: "You offer pickup all day on %{day1}."
+      line_number: 44
+    - key: "You offer pickup all day on %{day1} and %{day2}."
+      line_number: 45
+    - key: "You offer pickup all day on %{day1}, %{day2}, and %{day3}."
+      line_number: 46
+    - key: "You offer pickup all day on %{day1}, %{day2}, %{day3}, and %{day4}."
+      line_number: 47
+    - key: "You offer pickup all day on %{day1}, %{day2}, %{day3}, %{day4}, and %{day5}."
+      line_number: 48
+    - key: "You offer pickup all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, and %{day6}."
+      line_number: 49
+    - key: "You offer pickup all day on %{day1}, %{day2}, %{day3}, %{day4}, %{day5}, %{day6}, and %{day7}."
+      line_number: 50

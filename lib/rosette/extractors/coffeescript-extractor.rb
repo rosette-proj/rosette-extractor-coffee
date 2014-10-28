@@ -10,6 +10,10 @@ module Rosette
   module Extractors
 
     class CoffeescriptExtractor < Rosette::Core::Extractor
+      def supports_line_numbers?
+        true
+      end
+
       protected
 
       DEFAULT_HASH = {}.freeze
@@ -25,7 +29,7 @@ module Rosette
           walk(root) do |node|
             unless seen_objects[node.object_id]
               if node.include?('args')
-                yield node
+                yield node, node['locationData']['first_line'].to_i + 1
               end
             end
 
